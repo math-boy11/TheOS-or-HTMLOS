@@ -1,4 +1,4 @@
-# TheOS-or-HTMLOS
+# TheOS or HTMLOS
 This is an operating system written in HTML. 
 
 # Installation
