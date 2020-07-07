@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theo OS Vm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="changeDate()">
+    <div id="panel">
+        <p id="datetime"></p>
+    </div>
+    <div id="container1">
+        <div id="aboutwin" onmousedown='mydragg.startMoving(this,"aboutwin",event);'
+            onmouseup='mydragg.stopMoving("aboutwin");' style="display: none;">
+            <div id="topbar" style="background-color: black;">
+                <table>
+                    <tr>
+                        <td><a id="closeabout" href="nolink.html"
+                                style="color:white;text-decoration: none;cursor: default;"><span
+                                    style="background-color: red; ">X</span></a></td>
+                        <td style="text-align: center; color: white;">About</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="content">
+                <h1>TheOS 1.0</h1>
+                <img src="logo.png" draggable="false" style="width: 10%;height: 10%;">
+                <p>TheOS or HTMLOS is an operating system built in HTML5 and can run in the browser. It was built by
+                    Theodore Boersma when he was 10 years old.</p>
+            </div>
+        </div>
+        <div id="texteditorwin" onmousedown='mydragg.startMoving(this,"texteditorwin",event);'
+            onmouseup='mydragg.stopMoving("texteditorwin");' style="display: none;">
+            <div id="topbar" style="background-color: black;">
+                <table>
+                    <tr>
+                        <td><a id="texteditclose" href="nolink.html"
+                                style="color:white;text-decoration: none;cursor: default;"><span
+                                    style="background-color: red; ">X</span></a></td>
+                        <td style="text-align: center; color: white;">Text Editor</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="content">
+                <br>
+                <textarea rows="6" style="width: 95%;" id="texteditval">
+
+        </textarea><br>
+                <button id="save" onclick="save('texteditval')">Save</button> <button id="clear"
+                    onclick="clearText()">Clear</button>
+                <br>
+
+            </div>
+        </div>
+        <div id="terminalwin" onmousedown='mydragg.startMoving(this,"terminalwin",event);'
+            onmouseup='mydragg.stopMoving("terminalwin");' style="display: none; background-color: black;">
+            <div id="topbar" style="background-color: black">
+                <table>
+                    <tr>
+                        <td><a id="terminalclose" href="nolink.html"
+                                style="color:white;text-decoration: none;cursor: default;"><span
+                                    style="background-color: red; ">X</span></a></td>
+                        <td style="text-align: center; color: white;">Terminal</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="content1" style="background-color: black;">
+                <embed height="600px" allowscrolling="no" width="100%" src="terminal.html">
+            </div>
+        </div>
+
+    </div>
+    <div id="calculatorwin" onmousedown='mydragg.startMoving(this,"calculatorwin",event);'
+        onmouseup='mydragg.stopMoving("calculatorwin");' style="display: none; background-color: white;">
+        <div id="topbar" style="background-color: black">
+            <table>
+                <tr>
+                    <td><a id="calculatorclose" href="nolink.html"
+                            style="color:white;text-decoration: none;cursor: default;"><span
+                                style="background-color: red; ">X</span></a></td>
+                    <td style="text-align: center; color: white;">Calculater</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content2">
+            <br>
+            <table border="1">
+                <tr>
+                    <td colspan="3"><input type="text" id="result" /></td>
+                    <!-- clr() function will call clr to clear all value -->
+                    <td><input type="button" value="c" onclick="clr()" /> </td>
+                </tr>
+                <tr>
+                    <!-- create button and assign value to each button -->
+                    <!-- dis("1") will call function dis to display value -->
+                    <td><input type="button" value="1" onclick="dis('1')" /> </td>
+                    <td><input type="button" value="2" onclick="dis('2')" /> </td>
+                    <td><input type="button" value="3" onclick="dis('3')" /> </td>
+                    <td><input type="button" value="/" onclick="dis('/')" /> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="dis('4')" /> </td>
+                    <td><input type="button" value="5" onclick="dis('5')" /> </td>
+                    <td><input type="button" value="6" onclick="dis('6')" /> </td>
+                    <td><input type="button" value="-" onclick="dis('-')" /> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" onclick="dis('7')" /> </td>
+                    <td><input type="button" value="8" onclick="dis('8')" /> </td>
+                    <td><input type="button" value="9" onclick="dis('9')" /> </td>
+                    <td><input type="button" value="+" onclick="dis('+')" /> </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="." onclick="dis('.')" /> </td>
+                    <td><input type="button" value="0" onclick="dis('0')" /> </td>
+                    <!-- solve function call function solve to evaluate value -->
+                    <td><input type="button" value="=" onclick="solve()" /> </td>
+                    <td><input type="button" value="*" onclick="dis('*')" /> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    </div>
+    <div id="flappyBirdwin" onmousedown='mydragg.startMoving(this,"flappyBirdwin",event);'
+        onmouseup='mydragg.stopMoving("flappyBirdwin");' style="display: none; background-color: white;">
+        <div id="topbar" style="background-color: black">
+            <table>
+                <tr>
+                    <td><a id="flappyBirdclose" href="nolink.html"
+                            style="color:white;text-decoration: none;cursor: default;"><span
+                                style="background-color: red; ">X</span></a></td>
+                    <td style="text-align: center; color: white;">Calender</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <br>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FVancouver&amp;src=YnJ0cXVzZmFxOHY3aTY1YXNvODltdDltNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;showTz=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <div id="dash">
+
+        <a id="about" draggable="false" title="About" href="nolink.html">
+            <img src="about.png" draggable="false" style="width: 1.5%; height: 2%;">
+        </a>
+        <a id="text-editor" draggable="false" title="Text Editor" href="nolink.html">
+            <img src="text-editor.png" draggable="false" style="width: 1.5%; height: 2%;">
+        </a>
+        <a id="terminal" draggable="false" title="Terminal" href="nolink.html">
+            <img src="terminal.png" draggable="false" style="width: 1.5%; height: 2%;">
+        </a>
+        <a id="calculater" draggable="false" title="Calculater" style="cursor: default;text-decoration: none;"
+            href="nolink.html">
+            <img src="calculator.png" draggable="false" style="width: 1.5%; height: 1.2%; cursor: default;">
+        </a>
+        <a id="flappybird" draggable="false" title="Calender" style="cursor: default;" href="nolink.html">
+            <img src="calender.png" draggable="false" style="width: 1.5%; height: 1.2%; cursor: default;">
+        </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
