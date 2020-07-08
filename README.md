@@ -5,4 +5,4 @@ This is an operating system written in HTML. It has a few programs like a Calcul
 Go into your folder and clone the repository. Then, run the index.html file.
 
 # License
-All of this is free to add and redistribute! You can do whatever you want with this
+All of this is free to add and redistribute! You can do whatever you want with this!
