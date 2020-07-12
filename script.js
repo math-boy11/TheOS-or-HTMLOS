@@ -30,6 +30,14 @@ document.getElementById("datetime").innerHTML = Date();
 }
 setInterval(function(){ changeDate() }, 1000);
 
+setInterval(function(){ choosePic() }, 60000);
+
+var myPix = new Array("bg-happy.png","bg-sad.png","bg-angry.png");
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("bg").src = myPix[randomNum];
+}
 
 
     //Get a reference to the link on the page
