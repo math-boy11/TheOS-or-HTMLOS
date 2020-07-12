@@ -1,3 +1,5 @@
+document.getElementById("datetime").innerHTML = Date();
+
 var aboutwindow = document.getElementById('aboutwin');
 var x = Math.floor(Math.random()*300);
 var y = Math.floor(Math.random()*300);
@@ -23,7 +25,6 @@ var y = Math.floor(Math.random()*300);
     var y = Math.floor(Math.random()*300);
     flappyBirdwin.style.top = x + 'px';
     flappyBirdwin.style.left = y + 'px';
-    document.getElementById("datetime").innerHTML = Date();
 function changeDate() {
 document.getElementById("datetime").innerHTML = Date();
 }
@@ -86,8 +87,6 @@ setInterval(function(){ changeDate() }, 1000);
       closeFlappyBird()
       return false;
     }
-    
-
     function openAbout() {
       document.getElementById("aboutwin").style.display = "initial";
     }

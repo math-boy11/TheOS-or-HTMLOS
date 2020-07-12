@@ -10,7 +10,7 @@
 
 <body onload="changeDate()">
     <div id="panel">
-        <p id="datetime"></p>
+        <p onclick="openFlappyBird()" title="Open Calendar" id="datetime"></p>
     </div>
     <div id="container1">
         <div id="aboutwin" onmousedown='mydragg.startMoving(this,"aboutwin",event);'
@@ -139,7 +139,9 @@
         </div>
         <div id="content">
             <br>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FVancouver&amp;src=YnJ0cXVzZmFxOHY3aTY1YXNvODltdDltNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;showTz=0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FVancouver&amp;src=YnJ0cXVzZmFxOHY3aTY1YXNvODltdDltNnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%237CB342&amp;showTitle=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=1&amp;showTz=0"
+                style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 
@@ -150,6 +152,7 @@
         <a id="about" draggable="false" title="About" href="nolink.html">
             <img src="about.png" draggable="false" style="width: 1.5%; height: 2%;">
         </a>
+
         <a id="text-editor" draggable="false" title="Text Editor" href="nolink.html">
             <img src="text-editor.png" draggable="false" style="width: 1.5%; height: 2%;">
         </a>
