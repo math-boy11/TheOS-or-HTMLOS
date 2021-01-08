@@ -6,3 +6,6 @@ Go into your folder and clone the repository. Then, run the index.html file. Thi
 
 # License
 All of this is free to add and redistribute! You can do whatever you want with this!
+
+# Live Demo
+You can view the live demo [here](https://theos-demo.vbsoffice.repl.co/).
